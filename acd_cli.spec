@@ -3,8 +3,8 @@
 
 
 Name:    acd_cli
-Version: 0.3.1
-Release: 3%{?dist}
+Version: 0.3.2
+Release: 1%{?dist}
 Summary: A command line interface and FUSE filesystem for Amazon Cloud Drive 
 
 License: GPLv2+
@@ -53,6 +53,9 @@ ln -s acd_cli $RPM_BUILD_ROOT/%_bindir/acdcli
 %_bindir/acd_cli
 
 %changelog
+* Sat Sep  3 2016 Juan Orti Alcaine <jorti@fedoraproject.org> - 0.3.2-1
+- Version 0.3.2
+
 * Tue Jul 19 2016 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 0.3.1-3
 - https://fedoraproject.org/wiki/Changes/Automatic_Provides_for_Python_RPM_Packages
 
