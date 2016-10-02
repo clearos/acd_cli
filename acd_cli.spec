@@ -4,7 +4,7 @@
 
 Name:    acd_cli
 Version: 0.3.2
-Release: 1%{?dist}
+Release: 2%{?dist}
 Summary: A command line interface and FUSE filesystem for Amazon Cloud Drive 
 
 License: GPLv2+
@@ -17,9 +17,9 @@ BuildRequires:  python3-devel
 # in order from https://acd-cli.readthedocs.org/en/latest/setup.html#python-packages
 Requires:   python3-appdirs
 Requires:   python3-colorama
-Recommends: python3-dateutils
+Requires:   python3-dateutil
 Requires:   python3-requests > 2.1.0
-Recommends: python3-requests-toolbelt
+Requires:   python3-requests-toolbelt
 Requires:   python3-sqlalchemy
 
 %description
@@ -53,6 +53,11 @@ ln -s acd_cli $RPM_BUILD_ROOT/%_bindir/acdcli
 %_bindir/acd_cli
 
 %changelog
+* Sun Oct  2 2016 Matthew Miller <mattdm@fedoraproject.org> - 03.2-2
+- package docs say "dateutils' but means "dateutil"
+- change that and requests-toolbelt to hard dep, because package will not actually
+  function without
+  
 * Sat Sep  3 2016 Juan Orti Alcaine <jorti@fedoraproject.org> - 0.3.2-1
 - Version 0.3.2
 
