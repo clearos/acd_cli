@@ -5,4 +5,3 @@ git remote add upstream git://pkgs.fedoraproject.org/acd_cli.git
 git pull upstream f23
 git checkout clear7
 git merge --no-commit f23
-
